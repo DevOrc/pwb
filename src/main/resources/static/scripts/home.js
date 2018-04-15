@@ -2,6 +2,7 @@ function init() {
     httpGetAsync("/api/get/version", loadVersion);
 
     window.setInterval(verifyStatus, 2500);
+    initWeather();
 }
 
 /*
@@ -23,11 +24,9 @@ function verifyStatus(){
 
         statusSpan = document.getElementById("consoleSpan");
         if (xmlHttp.status == 200){
-            console.log("Server Online!");
             statusSpan.innerHTML = "Online!";
             statusSpan.style = "color:lightgreen;";    
         }else if(xmlHttp.status == 0){
-            console.log("Server Offline!");
             statusSpan.innerHTML = "Offline!";
             statusSpan.style = "color:orange ;"; 
         }else{

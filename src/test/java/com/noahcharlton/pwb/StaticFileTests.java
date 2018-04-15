@@ -23,6 +23,7 @@ public class StaticFileTests {
 	@Test
 	public void staticJS() throws Exception {
 		verifyStaticFile("/scripts/home.js");
+		verifyStaticFile("/scripts/weather.js");
 	}
 
 	@Test
