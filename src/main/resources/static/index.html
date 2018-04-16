@@ -14,7 +14,7 @@
 
 <body onload="init()">
 <!-- Title Bar -->
-<ul>
+<ul class="toolbar">
     <li>
         <p id="title">Personal Dashboard</p>
     </li>
@@ -24,18 +24,20 @@
 <div style="margin:2.5%">
     <!-- Weather Block-->
     <div class="main-block" style="height:220px;width:280px;line-height:15px">
-        <div style="height:75px;vertical-align:middle;">
-            <img style="display:inline-block;vertical-align:middle;" width="75px" height="75px" id="weather-icon" src="test"/>
-            <h2 style="color:white;text-align:center;display:inline">Weather</h2>
+        <div style="height:50px;vertical-align:middle;">
+            <img style="display:inline-block;vertical-align:middle;" width="75px" height="75px" id="weather-icon"/>
+            <h1 style="color:white;text-align:center;display:inline">Weather</h1>
         </div>
-        <h3 style="color:white;" id="weather-description">Description<h3>
-
-
+        <ul style="color:white;">
+            <li><h3 style="color:white;" id="weather-description">Description</h3>
+            <li><h3 style="color:white;" id="temp">Temperature</h3>
+            <li><h3 style="color:white;" id="wind">Wind</h3>
+        </ul>
     </div>
 </div>
 
 <!-- Bottom Toolbar -->
-<ul class="toolbar">
+<ul class="toolbar" id="bottom-toolbar">
     <li>
         <p>Status:
             <span style="color:lightgreen" id="consoleSpan">
